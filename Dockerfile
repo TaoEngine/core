@@ -12,6 +12,9 @@ ENV \
 
 ARG QEMU_CPU
 
+# 必须换源，太卡了！
+RUN sed -i 's!http://dl-cdn.alpinelinux.org/!https://mirrors.ustc.edu.cn/!g' /etc/apk/repositories
+
 # Install uv
 RUN pip3 install uv==0.5.27
 
